@@ -1,0 +1,183 @@
+body {
+    background: #333;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#title {
+    position: absolute;
+    font: 25px serif;
+    color: beige;
+    left: 500px;
+    top: -10px;
+}
+
+#canvas {
+    position: absolute;
+    left: 51px;
+    margin: 0px;
+    z-index: 2;
+}
+
+#bCanvas{
+    position: absolute;
+    left: 51px;
+    margin: 0px;
+    z-index: 1;
+}
+
+#canvas2 {
+    border-left: 1px solid black;
+    position: absolute;
+    left: 317px;
+    z-index: 2;
+}
+
+#bCanvas2 {
+    border-left: 1px solid black;
+    position: absolute;
+    left: 317px;
+    z-index: 1;
+}
+
+#canvas3 {
+    border-left: 1px solid black;
+    position: absolute;
+    left: 584px;
+    z-index: 2;
+}
+
+#bCanvas3 {
+    border-left: 1px solid black;
+    position: absolute;
+    left: 584px;
+    z-index: 1;
+}
+
+#tCanvas {
+    position: absolute;
+    left: 51px;
+    margin: 0px;
+    z-index: 1;
+}
+#fCanvas {
+    position: absolute;
+    border-left: 1px solid black;
+    left: 451px;
+    margin: 0px;
+    z-index: 1;
+}
+
+#tCanvas2 {
+    position: absolute;
+    left: 51px;
+    margin: 0px;
+    z-index: 2;
+}
+
+#fCanvas2 {
+    position: absolute;
+    border-left: 1px solid black;
+    left: 451px;
+    margin: 0px;
+    z-index: 2;
+}
+#container{
+    position: absolute;
+    top: 50px;
+    left: 300px;
+    background: #111;
+    width: 1238px;
+    height: 700px;
+}
+
+.menu {
+    color: beige;
+    background: #111;
+    display: inline-block;
+    height: 700px;
+    float: left;
+    left: 0;
+    list-style: none;
+    position: absolute;
+    top: 34px;
+    width: 270px;
+}
+    .menu li {
+        padding: 15px;
+        margin: 15px;
+        border: 1px bisque solid;
+        text-align: center;
+    }
+        .menu li:hover {
+           border: 1px solid gray;
+           color: white;
+        }
+            
+        .menu li:first-child {
+            margin-top: 150px;
+        }
+video {
+    position: absolute;
+    top: 50px;
+    left: 151px;
+    z-index: 1;
+}
+#cvs {
+    position: absolute;
+    width: 850px;
+    height: 650px;
+    top: 50px;
+    left: 100px;
+    z-index: 1;
+}
+.button {
+    background: #111;
+    border: 1px solid beige;
+    width: 100px;
+    height: 30px;
+    color: beige;
+    position: absolute;
+    z-index: 3;
+    visibility: hidden;
+}
+#on {
+    top: 10px;
+    left: 170px;
+}
+#off {
+    top: 10px;
+    left: 280px;
+}
+#dust-on {
+    top: 10px;
+    left: 170px;
+}
+#dust-off {
+    top: 10px;
+    left: 280px;
+}
+#sunny {
+    top: 10px;
+    left: 170px;
+}
+
+#cloudy {
+    top: 10px;
+    left: 280px;
+}
+#vaporStart {
+    top: 10px;
+    left: 170px;
+}
+
+.transition, .otherCanvas {
+    visibility: hidden;
+}
+ 
+.visible {
+    visibility: visible;
+}

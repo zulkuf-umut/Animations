@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link type="text/css" rel="stylesheet" href="css.css">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="javascript.js"></script>
+        <script src="Libraries/blur.js"></script>
+    </head>
+    <body>
+        <header>
+            <menu class="menu">
+                <li id="fingerprint">Parmak İzi Testi</li>
+                <li id="rainDrop">Su Testi</li>
+                <li id="dust">Toz Testi</li>
+                <li id="scratch">Çizilme Testi</li>
+                <li id="brightness">Parlaklık Testi</li>
+                <li id="vapor">Buğulanma Testi</li>
+                <li id="transition">Transition Fotokromik Karşılaştırma</li>
+            </menu>
+        </header>
+            <div id="container">
+                <input type="button" value="Işığı aç!" id="on" class="button brightness">
+                <input type="button" value="Işığı kapat!" id="off" class="button brightness">
+                <input type="button" value="Başlat!" id="vaporStart" class="button vapor">
+                <input type="button" value="Tozu göster!" id="dust-on" class="button dust">
+                <input type="button" value="Tozu gizle!"  id="dust-off" class="button dust">
+                <input type="button" value="Güneşli!" id="sunny" class="button transition">
+                <input type="button" value="Bulutlu!"  id="cloudy" class="button transition">
+                <video id="video" width="800" height="600" autoplay></video>
+                <div id="cvs">
+                    <canvas id="tCanvas" class="transition" width="400" height="600"></canvas>
+                    <canvas id="fCanvas" class="transition" width="400" height="600"></canvas>
+                    <canvas id="tCanvas2" class="transition" width="400" height="600"></canvas>
+                    <canvas id="fCanvas2" class="transition" width="400" height="600"></canvas>
+                    <canvas id="bCanvas" class="otherCanvas" width="267" height="600"></canvas>
+                    <canvas id="bCanvas2" class="otherCanvas" width="267" height="600"></canvas>
+                    <canvas id="bCanvas3" class="otherCanvas" width="267" height="600"></canvas>
+                    <canvas id="canvas" class="otherCanvas" width="267" height="600">There seems to be a problem with your canvas.</canvas>
+                    <canvas id="canvas2" class="otherCanvas" width="267" height="600">There seems to be a problem with your canvas.</canvas>
+                    <canvas id="canvas3" class="otherCanvas" width="267" height="600">There seems to be a problem with your canvas.</canvas>
+                </div>
+            </div>
+    </body>
+</html>
