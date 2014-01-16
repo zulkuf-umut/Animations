@@ -625,7 +625,7 @@ $(document).ready(function(){
     }
         
     //choose and play the webcam: (logitech kamerayı chrome'da kullanabilmek için) 
-    /////////////(Firefoxta bu kısım desteklenmiyor.)//////////////////////  
+/////////////////////////(MediaStreamTrack Firefoxta desteklenmiyor.)//////////////////////  
     MediaStreamTrack.getSources(function(sourceInfos) {
       var videoSource = null;
       for (var i = 0; i !== sourceInfos.length; ++i) {
@@ -646,6 +646,7 @@ $(document).ready(function(){
         }
         };
 //////////////////////////////////////////////////////////////////////////////////
+        //getUserMedia mobil cihazlarda desteklenmiyor.
         if (navigator.getUserMedia) {
             navigator.getUserMedia(constraints, function(stream) {   //Media stream track kısmı çıkartılırsa constraints , {video: true} ile değiştirilmelidir.
                 var localMediaStream = stream;
@@ -667,7 +668,7 @@ $(document).ready(function(){
             $('.otherCanvas').addClass('visible');
             unbind();
             canvasPrep(context,context2,context3,"Parmak İzi Testi");
-            //draw fingerprint on wherever clicked:
+            //draw fingerprint on click:
             $('#canvas').on("click tap",function(event){
                 event.preventDefault();
                 var pageX = event.pageX;
@@ -753,7 +754,7 @@ $(document).ready(function(){
                 oldX = 0;
                 oldY = 0;
             });
-            //draw line on "mouse move"://////////////
+            //draw line on "mouse move:
             $('#canvas').on('mousemove',function(event) {
                 if(mousedown) {
                     scratchAnim(context,0.6,1, event.pageX, event.pageY);
@@ -770,7 +771,8 @@ $(document).ready(function(){
                 }
             });
             
-            ////////////////////////////////////////////////////////////////////////////////////
+            // Touch version has not been tested, yet.
+            // Draw line on finger move:
             $('.otherCanvas').on('touchstart',function(event) {
                 event.preventDefault();
                 touched = true;
